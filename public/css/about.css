@@ -1,0 +1,121 @@
+
+#title .container-fluid {
+    background-color: #28a7dc;
+    color: #fff;
+    padding: 3% 5% 2%;
+  }
+  
+  .body {
+    text-align: center;
+    font-family: "Cambria";
+  }
+  
+  /* TitleSection */
+  
+  .txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .big-heading {
+    font-size: 2.5rem;
+    line-height: 1.5;
+    font-family: "Cambria-Bold";
+    animation-name: small;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+  .big-heading2
+  {
+    font-size: 2.5rem;
+    line-height: 1.5;
+    font-family: "Cambria-Bold";
+    color: black;
+    animation-name: small;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+ 
+  .banK{
+    font-size: 25.0em;
+    animation-name: fade;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fade{
+    0%{font-size: 25.0em;}
+    100%{font-size: 10.0em;}
+  
+  }
+  @keyframes small {
+    0%{font-size: 2.5rem; line-height: 1.5; }
+    100%{font-size: 1.0rem; line-height: 1.0; }
+  }
+  
+  
+  #title {
+   
+    padding-bottom: 7%;
+  }
+  
+  
+  /* navigationsection */
+  .navbar-heading {
+    font-size: 1.3rem;
+    font-family: "Times New Roman";
+    padding: 0 0;
+    
+  }
+  
+  .navbar {
+    padding: 0 0 4.5rem;
+  }
+  
+  .nav-item {
+    color: #fff;
+    padding: 0 18px;
+  }
+  .stl{
+    background-color: black;
+    height: 40vh;
+    opacity: 0.7;
+    
+  }
+  .description {
+    font-size: 2.5rem;
+    font-family: "Cambria";
+    text-align: left;
+    padding-bottom: 7%;
+  }
+  
+  .m-img {
+    right: 30%;
+    width: 80%
+  }
+  
+
+
+ 
+  #footer {
+  
+    background-color: #2a2f31;
+    padding: 3% 15%;
+    color: #fff;
+    text-align: center;
+   
+  }
+
+.social-icon{
+  padding: 5px;
+  color: #fff;
+}  
+
+#features{
+  padding-top: 10%;
+  padding-left: 5%;
+  padding-bottom: 15%;
+}
+
+  

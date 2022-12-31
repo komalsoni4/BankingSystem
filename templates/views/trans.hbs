@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Profile</title>
+
+  <!-- Googlefont -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;900&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS style sheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ {{!-- favicon --}}
+  
+  <link rel="icon" href="static/images/grip.png">
+  <!-- bootstrap script -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <div class="container">
+
+     {{#each details}}
+      <h1>hiii {{name}}</h1>
+ <form action="/trans/{{_id}}" method="POST">
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Your Email-Id</label>
+    <input type="email" name="email" class="form-control" value="{{email}}" placeholder="{{email}}" >
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">select Customer</label>
+    <select class="form-control" name="receiver">
+        {{!-- {{#each overalldetail}} --}}
+      {{!-- <option value="{{this.email}}">{{this.email}}</option> --}}
+      {{!-- {{/each}} --}}
+       <option value="sanjanakumari1242@gmail.com">sanjanakumari1242@gmail.com</option>
+      <option value="vikas@gmail.com">vikas@gmail.com</option>
+      <option value="ranjan@gmail.com">ranjan@gmail.com</option>
+      <option value="tinku@gmail.com">tinku@gmail.com</option>
+      <option value="k@ce.iitr.ac.in">k@ce.iitr.ac.in</option>
+    </select>
+  </div>
+    <div class="form-group">
+    <label for="exampleFormControlInput1">Enter Amount</label>
+    <input type="amount" name="amount" class="form-control"  placeholder="0.00" value="0.00">
+  </div>
+     <input type="submit" class="btn btn-primary" value="SendMoney"/>
+        
+   {{!-- <a href="/moneysent/{{_id}}"><button type="button"class="btn btn-primary" id="#sendMoney">Send Money</button></a> --}}
+              <a href="/history/{{_id}}"><button type="button"class="btn btn-outline-primary ms-2" >view History</button></a>
+</form>
+
+    {{/each}}
+
+  </div>
+   
+
+</body>
+</html>

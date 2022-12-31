@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>View Customers</title>
+
+  <!-- Googlefont -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;900&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS style sheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/css/customerlist.css">
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  {{!-- favicon --}}
+  
+  <link rel="icon" href="static/images/grip.png">
+  <!-- bootstrap script -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+</head>
+
+<body>
+
+  <!-- title section -->
+ 
+  <section id="title">
+    <div class="container-fluid">
+      
+      {{>navbar}}
+      <div class="txt">
+       {{>name}}
+        <br>
+      </div>
+    </div>
+        
+  </div> 
+    
+  </section>
+
+  {{!-- <section class="white-section" id="features">
+       <strong class="text-center font-size">Our Customer list</strong>
+  </section> --}}
+
+  <section id="featured">
+    
+     <div class="row">
+       {{#each details}}
+      <div class="col-sm-4">
+        <div class="change">
+          <i class="fa fa-user"></i>
+          <p class="namee">{{name}}</p>
+          {{!-- <a href=""> <button type="button"   class="btn btn-outline-secondary">view</button></a> --}}
+        </div>       
+      </div>
+      {{/each}}
+     </div>
+
+   
+<!-- modals view customer -->
+</section>
+    <!-- modals of customer id babao jisme transfer money wala buttton ho aur baaki customer ke naam dekhne ka v  -->
+  
+ 
+    
+   
+   
+
+  
+
+    {{>footer}}
+
+  
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
+  <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
+  <script src="static/js/script.js"></script>
+</body>
+</html>
